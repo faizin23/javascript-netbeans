@@ -1,0 +1,55 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package live.coding;
+import javax.swing.JFrame;
+import javax.swing.*;
+import java.awt.*;
+
+/**
+ *
+ * @author ok
+ */
+public class TUGAS extends JFrame {
+    JButton masuk=new JButton("Log In");
+    JLabel nama=new JLabel("Username: ");
+    JLabel sandi=new JLabel("Password: ");
+    JTextField user=new JTextField();
+    JTextField pass=new JTextField();
+    
+    
+    public TUGAS (){
+        super("TUGAS");
+        
+        setLocation(300,200);
+        setSize(400,200);
+         
+}
+    public void tambah (){  
+        setResizable(false);
+        getContentPane().setLayout(null);
+        getContentPane().setBackground(Color.gray);
+        getContentPane().add(nama);
+        getContentPane().add(sandi);
+        getContentPane().add(user);
+        getContentPane().add(pass);
+        getContentPane().add(masuk);
+        
+        nama.setBounds(20,20,70,20);
+        sandi.setBounds(20,80,70,20);
+        user.setBounds(100,20,250,20);
+        pass.setBounds(100,80,250,20);
+        masuk.setBounds(100,120,80,40);
+        
+        setVisible(true);
+    }
+    
+    public static void main(String[] args) {
+        TUGAS a = new TUGAS();
+        a.tambah();
+        a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}
